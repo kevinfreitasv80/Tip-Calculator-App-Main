@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    --color1: hsl(172, 67%, 45%);
+    --color2: hsl(183, 100%, 15%);
+    --color3: hsl(186, 14%, 43%);
+    --color4: hsl(184, 14%, 56%);
+    --color5: hsl(185, 41%, 84%);
+    --color6: hsl(189, 41%, 97%);
+    --color7: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--color5);
+}
+body, input, button{
+    font-family: "Space Mono", sans-serif;
+}
+.logo{
+    width: 68px;
+    height: 42px;
+}
+main, aside{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+aside{
+    top: 19%;
+}
+main{
+    background: var(--color7);
+}
+main section:last-child article{
+    justify-content: space-between;
+}
+main, main section:last-child article{
+    display: flex;
+    align-items: center;
+}
+main section:last-child article:last-of-type{
+    margin: 20px 0 100px 0;
+}
+.resetButton{
+    background: var(--color1);
+    width: 100%;
+    border-radius: .3em;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: .4em 0;
+}
+.resetButton .disabled{
+    background: none;
+}
+main section:last-child{
+    background: var(--color2);
+    color: white;
+    width: 258px;
+    padding: 30px;
+    border-radius: .7em;
+    margin-left: 37px;
+}
+main section:last-child div{
+    color: var(--color7);
+    font-size: .7em;
+    margin-bottom: -5px;
+    letter-spacing: .5px;
+}
+main section:last-child span{
+    color: var(--color4);
+    font-size: .7em;
+}
+h1{
+    font-size: 35px;
+    color: var(--color1);
+    margin: 0;
+}
+.inputDollar, .inputPerson{
+    padding: .3em .5em;
+    border-radius: .5em;
+    align-items: center;
+    background: var(--color6);
+}
+input::placeholder{
+    color: var(--color4);
+}
+label, p{
+    color: var(--color3);
+}
+input, button{
+    border: none;
+}
+input{
+    font-size: 20px;
+    outline: none;
+    text-align: end;
+    background: none;
+    color: var(--color2);
+}
+button{
+    cursor: pointer;
+}
+.tipButton{
+    background: var(--color2);
+    color: var(--color7);
+    font-size: 24px;
+    border-radius: .2em;
+}
+
+.gridTipButton{
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(2, 40px);
+    gap: 10px;
+}
