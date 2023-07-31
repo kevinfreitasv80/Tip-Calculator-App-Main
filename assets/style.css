@@ -8,6 +8,8 @@
     --color5: hsl(185, 41%, 84%);
     --color6: hsl(189, 41%, 97%);
     --color7: hsl(0, 0%, 100%);
+    --color8: hsl(183, 79%, 24%);
+    --color9: hsl(183, 87%, 21%);
 }
 
 body{
@@ -55,8 +57,9 @@ main section:last-child article:last-of-type{
     font-size: 1em;
     padding: .4em 0;
 }
-.resetButton .disabled{
-    background: none;
+.resetButton.disabled{
+    background: var(--color8);
+    color: var(--color9);
 }
 main section:last-child{
     background: var(--color2);
@@ -85,6 +88,8 @@ h1{
     padding: .3em .5em;
     border-radius: .5em;
     align-items: center;
+}
+.inputDollar, .inputPerson, .gridTipButton button:last-child{
     background: var(--color6);
 }
 input::placeholder{
@@ -119,6 +124,14 @@ button{
     grid-template-rows: repeat(2, 40px);
     gap: 10px;
 }
+.gridTipButton button:last-child{
+    color: var(--color8);
+    font-size: 1.2em;
+}
 main>section section{
     margin: 30px 0;
+}
+
+main section:last-child h1::before{
+    content: "$";
 }
