@@ -18,7 +18,7 @@
           <label for="bill">Bill</label>
           <nav class="inputDollar">
             <img src="images/icon-dollar.svg" alt="Icon Dollar">
-            <input id="bill" type="text" placeholder="0">
+            <input class="inputsNotTip" id="bill" type="text" placeholder="0">
           </nav>
         </article>
         <section>
@@ -29,14 +29,17 @@
             <button class="tipButton">15%</button>
             <button class="tipButton">25%</button>
             <button class="tipButton">50%</button>
-            <button>Custom</button>
+            <input id="custom" type="text" placeholder="Custom">
           </nav>
         </section>
         <article>
-          <label for="quantPeople">Number of People</label>
+          <div class="PeopleDiv">
+            <label for="quantPeople">Number of People</label>
+            <span class="spanError"></span>
+          </div>
           <nav class="inputPerson">
             <img src="images/icon-person.svg" alt="Icon Person">
-            <input id="quantPeople" type="text" placeholder="0">
+            <input class="inputsNotTip" id="quantPeople" type="text" placeholder="0">
           </nav>
         </article>
       </section>

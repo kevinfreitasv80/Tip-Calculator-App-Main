@@ -10,6 +10,8 @@
     --color7: hsl(0, 0%, 100%);
     --color8: hsl(183, 79%, 24%);
     --color9: hsl(183, 87%, 21%);
+    --color10: hsl(173, 61%, 77%);
+    --color11: hsl(173, 100%, 27%);
 }
 
 body{
@@ -57,6 +59,11 @@ main section:last-child article:last-of-type{
     font-size: 1em;
     padding: .4em 0;
 }
+.resetButton:hover, .tipButton:hover{
+    transition: .5s;
+    background: var(--color10);
+    color: var(--color8);
+}
 .resetButton.disabled{
     background: var(--color8);
     color: var(--color9);
@@ -86,8 +93,14 @@ h1{
 }
 .inputDollar, .inputPerson{
     padding: .3em .5em;
-    border-radius: .5em;
+    border-radius: .3em;
     align-items: center;
+}
+.inputDollar:has(input:focus), .inputPerson:has(input:focus), #custom:focus{
+    outline: 1px solid var(--color11);
+}
+.inputPerson:has(input:focus.invalid), .inputPerson:has(input.invalid){
+    outline: 1px solid red;
 }
 .inputDollar, .inputPerson, .gridTipButton button:last-child{
     background: var(--color6);
@@ -95,7 +108,7 @@ h1{
 input::placeholder{
     color: var(--color4);
 }
-label, p{
+label, p, span{
     color: var(--color3);
     font-size: .78em;
 }
@@ -134,4 +147,14 @@ main>section section{
 
 main section:last-child h1::before{
     content: "$";
+}
+span{
+    color: red;
+}
+.PeopleDiv{
+    display: flex;
+    justify-content: space-between;
+}
+#custom{
+    border-radius: .2em;
 }
