@@ -158,3 +158,47 @@ span{
 #custom{
     border-radius: .2em;
 }
+
+@media (max-width: 740px) {
+    main{
+        display: grid;
+        place-items: center;
+        width: 350px;
+        height: 603px;
+        padding: 1em 0 2em;
+        top: 55%;
+    }
+    aside{
+        top: 7%;
+    }
+    main section:last-child{
+        margin: 0;
+    }
+}
+@media (max-width: 365px) {
+    main{
+        width: 330px;
+        padding: 0;
+    }
+    main section:last-child{
+        width: 220px;
+    }
+    aside{
+        top: 10%;
+    }
+    main section:last-child article:last-of-type{
+        margin-bottom: 1em;
+    }
+    .gridTipButton{
+        width: auto;
+        grid-template-columns: repeat(2, 144.9px);
+    }
+}
+@media (max-width: 340px) {
+    main section{
+        width: 95%;
+    }
+    main{
+        width: 100%;
+    }
+}
