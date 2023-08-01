@@ -178,7 +178,7 @@ span{
 @media (max-width: 365px) {
     main{
         width: 330px;
-        padding: 0;
+        padding: 0 0 1em 0;
     }
     main section:last-child{
         width: 220px;
